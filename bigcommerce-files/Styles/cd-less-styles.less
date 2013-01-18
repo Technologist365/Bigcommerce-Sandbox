@@ -1,0 +1,221 @@
+/*****************
+* Cart Designers *
+******************/
+
+/*Classes*/
+.bradius( @topleft, @topright, @bottomright, @bottomleft ) {
+  -moz-border-radius-bottomleft: @bottomleft;
+  -moz-border-radius-bottomright: @bottomright;
+  -moz-border-radius-topleft: @topleft;
+  -moz-border-radius-topright: @topright;
+  -webkit-border-bottom-left-radius: @bottomleft;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-top-left-radius: @topleft;
+  -webkit-border-top-right-radius: @topright;
+  border-bottom-left-radius: @bottomleft;
+  border-bottom-right-radius: @bottomright;
+  border-top-left-radius: @topleft;
+  border-top-right-radius: @topright;
+}
+
+.opacity (@arg: 100) {
+  filter: ~"alpha(opacity = @{arg})";
+  opacity: @arg / 100;
+}
+
+.radius ( @radius ) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+.shadow( @x : 2px,  @y : 2px, @blur : 5px, @spread : 0, @color : rgba(0,0,0,.6) ) {
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+.lgradient( @angle1: left, @angle2: 20deg, @begin: black, @end: white, @switch1 : 100%, @switch2: 0% ) {
+  background:  @begin;
+  background: linear-gradient(@angle1 @angle2, @begin @switch1, @end @switch2);
+  background: -o-linear-gradient(@angle1 @angle2, @begin @switch1, @end @switch2);
+  background: -moz-linear-gradient(@angle1 @angle2, @begin @switch1, @end @switch2);
+  background: -moz-linear-gradient(to @angle1 @angle2, @begin @switch1, @end @switch2);
+  background: -webkit-linear-gradient(@angle1 @angle2, @begin @switch1, @end @switch2);
+  background: -ms-linear-gradient(@angle1 @angle2, @begin @switch1, @end @switch2);
+}
+.gradient( @begin: black, @end: white, @switch1 : 100%, @switch2: 0% ) {
+  background: @begin;
+  background: -moz-linear-gradient(bottom, @begin @switch1, @end @switch2);
+  background: -ms-linear-gradient(bottom, @begin @switch1, @end @switch2);
+  background: -o-linear-gradient(bottom, @begin @switch1, @end @switch2);
+  background: -webkit-linear-gradient(bottom, @begin @switch1, @end @switch2);
+  background: linear-gradient(bottom, @begin @switch1, @end @switch2);
+}
+
+// Enter Template width Info
+@main-width: 960px;
+@middle-col-with-left: 800px; //size of content w/ left col
+@middle-col-with-right: 800px; //size of content w/ right col
+@middle-col-with-both: 640px; //size of content w/ two cols
+@leftcol: 160px;
+@rightcol: 160px;
+
+// Enter Fonts Info
+@font: "Trebuchet MS", Arial, Helvetica, sans-serif;
+@size: 12px;
+@color: #000000;
+
+//Enter Heading Info
+@headings-font: @font;
+@h1-color: black;
+@h1-size: 24px;
+@h2-color: #444444;
+@h2-size: 18px;
+@h3-color: #c0c0c0;
+@h3-size: 16px;
+
+//Enter Top Menu Links Info
+@tml-font: @font;
+@tml-size: 11px;
+@tml-color: #c0c0c0;
+@tml-decor: #c0c0c0;
+	@tmlhover-color: #000000;
+	@tmlhover-decor: blink;
+
+//Enter Main Nav Links Info
+@mnl-font: @font;
+@mnl-size: 12px;
+@mnl-color: #000000;
+@mnl-decor: none;
+	@mnlhover-color: #ffffff;
+	@mnlhover-decor: none;
+
+//Enter Sub Nav Links Info
+@snl-font: @font;
+@snl-size: 12px;
+@snl-color: #000000;
+	@snlhover-color: #ffffff;
+	@snlhover-decor: none;
+
+//Enter Search Input Info
+@sinput-color: #c0c0c0;
+@sinput-fstyle: italic;
+
+//Enter Footer Link Information
+@fcols: 5; //footer columns
+@fcols-pad: 10px; //space inbetween columns
+@fl-font: @font;
+@fl-size: 12px;
+@fl-color: #444444;
+	@flhover-color: #000000;
+	@flhover-decor: underline;
+
+//Header Classes
+.tml{color:@tml-color; font-size:@tml-size; font-family:@tml-font; text-decoration:@tml-decor;}//top menu link
+  .tmlh{color:@tmlhover-color; text-decoration:@tmlhover-decor;}//top menu link hover
+.mnl{color:@mnl-color; text-decoration:@mnl-decor; font-family:@mnl-font; font-size:@mnl-size;}//main nav link
+  .mnlh{color:@mnlhover-color; text-decoration:@mnlhover-decor;}//main nav link hover
+.snl{color:@snl-color; font-family:@snl-font; font-size:@snl-size;}//sub nav link
+  .snlh{color:@snlhover-color; text-decoration:@snlhover-decor;}//sub nav link hover
+.sinput{color:@sinput-color; font-style:@sinput-fstyle;}//search input
+
+//Footer Classes
+.fl{font-family:@fl-font; color:@fl-color; font-size:@fl-size;}
+.flh{color:@flhover-color; text-decoration:@flhover-decor;}
+
+
+/* General */
+body {
+  color: @color;
+  font-family: @font;
+  font-size: @size;
+  height: 100%;
+  background: none;
+}
+#Container h1, #Container h2, #Container h3{font-family:@headings-font;}
+#Container h1{font-size:@h1-size; color:@h1-color;}
+#Container h2{font-size: @h2-size; color:@h2-color;}
+#Container h3{font-size: @h3-size; color:@h3-color;}
+
+/* Header */
+#TopMenu{
+  width: 100%;
+  ul{
+    margin: auto;
+    width: @main-width;
+  }
+  li{
+    a{
+	  .tml;
+	  &:hover{
+	    .tmlh;
+	  }
+	}
+  }
+  div{
+    border: 0;
+  }
+}
+#Header {
+  border: none;
+  clear: both;
+  margin: 0px 0px 0px 0px;
+  margin: auto;
+  padding: 0px 0px 0px 0px;
+  width: @main-width;
+}
+#SearchForm {
+  input.Textbox {
+	  .sinput;
+  }
+}
+/*Navigation*/
+#Menu {
+  margin: auto;
+  width: 100%;  
+  ul {
+  margin: auto;
+  width: @main-width;    
+	li {      
+	  a {
+        .mnl;
+		&:hover{.mnlh;}
+      }
+    } 
+  }
+}
+/*Main Content*/
+#Wrapper {clear: both; width:@main-width; margin:auto;}
+.Content {
+  background: none;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  width: @main-width;
+  }
+.Content.left {float: left; width: @middle-col-with-left;}
+.Content.right{float: left; width: @middle-col-with-right;}
+.Content.left.right{margin: auto; width: @middle-col-with-both;}
+.Left {background: none; float: left; margin: 0px 0px 0px 0px; width: @leftcol;}
+.Right {background: none; float: right; margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; width: @rightcol;}
+
+/* Footer */
+#Footer {
+  width:100%;
+  border:none;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  #foot-wrapper{width:@main-width; margin:auto;}
+  .f-heading{font-weight:bold; font-size:15px;}
+  
+  ul{width:(@main-width/@fcols)-@fcols-pad; float:left; margin:0px @fcols-pad 0px 0px; position:relative;
+	li{float:left; display:inline-block; width:100%;
+	  a{
+		border:none;
+		.fl;
+		&:hover{
+		  .flh;	
+		}
+	  }
+	  img{width:100%;}
+	}
+  }  
+}

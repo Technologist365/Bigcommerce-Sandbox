@@ -1,0 +1,156 @@
+/***********************/
+/* Cart Designers 2012 */
+/***********************/
+
+/** HOMEPAGE **/
+/* Header */
+#TopMenu{}
+#Logo{}
+#SearchForm{}
+/* Navigation */
+#Menu{}
+#Menu ul li{}
+#Menu ul li.HasSubMenu{}
+#Menu ul li a{}
+#Menu ul li a:hover{}
+#Menu ul li.First{}
+#Menu ul li ul{}
+#Menu ul li ul li{}
+#Menu ul li ul li a{}
+#Menu ul li ul li a:hover{}
+#Menu ul li ul li:first-child{}
+/* Footer */
+#Footer{}
+#foot-wrapper{}
+#Footer ul{}
+#Footer ul li{}
+#Footer ul li a{}
+#Footer ul li a:hover{}
+/* Slider */
+
+/* CTAs */
+
+/* Newsletter Signup */
+#SideNewsletterBox{}
+
+/** CATEGORY PAGE **/
+.category{}
+#category-main{}
+.CategoryDescription{}
+/* Breadcrumb */
+#CategoryBreadcrumb{}
+/* Sub Category Menu */
+.SubCategoryList{}
+/* Pagination */
+#CategoryPagingTop{}
+#CategoryPagingBottom{}
+/* Product Grid */
+#CategoryContent{}
+ul.ProductList{}
+/* Category Menu */
+
+/** PRODUCT PAGE **/
+.product{}
+#product-main{}
+/* Breadcrumb */
+#ProductBreadcrumb{}
+/* Product Images + Lightbox*/
+#ProductThumb{}
+.ProductThumbImage{}
+.ImageCarouselBox{}
+#fancy_content{}
+/* Product Details */
+.ProductDetailsGrid{}
+.productAddToCart{}
+/* Social */
+.FacebookLikeButtonContainer{}
+.AddThisButtonBox{}
+.PinterestButtonContainer{}
+/* Product Tabs */
+ul.TabNav{}
+#ProductDescription{}
+#ProductVideos{}
+#ProductWarranty{}
+#ProductOtherDetails{}
+#ProductByCategory{}
+#ProductReviews{}
+#SimilarProductsByCustomerViews{}
+
+/** INNER PAGES **/
+.page{}
+#page-main{}
+/* Breadcrumb */
+#PageBreadcrumb{}
+/* Gen styles (p,ul,ol,h1,h2,h3,img) */
+#PageContent{}
+/** CHECKOUT **/
+.checkout{}
+/* Cart */
+#cart-main{}
+/* Checkout Express */
+#co-express{}
+/* Checkout Multipage */
+#co-main{}
+#co-address{}
+#co-shipping{}
+#co-confirm{}
+#co-payment{}
+/* Order Thanks / Error*/
+#co-finish{}
+#co-error{}
+
+/* ACCOUNT PAGES  */
+.account{}
+#a-main{}
+#a-address{}
+#a-download{}
+#a-edit{}
+#a-inbox{}
+#a-new-return{}
+#a-order{}
+#a-orders{}
+#a-order-status{}
+#a-recent{}
+#a-returns{}
+#a-saved-return{}
+#a-wishlist{}
+#a-login{}
+#a-create{}
+#a-forgot{}
+#a-create-thanks{}
+#a-new-pass{}
+#a-shipping{}
+/* Account Menus */
+#SideAccountMenu{}
+#SideAccountStoreCredit{}
+/* Account Form Fields */
+
+/* GiftCertificate Pages */
+.gift-certs{}
+#gc-main{}
+#gc-balance{}
+#gc-redeem{}
+
+/** Extras **/
+
+/* QuickView (color and text settings in backend) */
+.QuickViewModal{}
+/* FastAdd to Cart (off/on via backend) */
+#fastCartContainer{}
+/* Brands Page (Brands.html) */
+.brands{}
+#brands-main{}
+/* Search Pages (search.html / search_tips.html) */
+.search{}
+#search-main{}
+#search-tips{}
+/* Error Pages (404/403) */
+.error-page{}
+#error-403{}
+#error-404{}
+/* Sitemap */
+.sitemap{}
+#sitemap-main{}
+/* tags */
+.tags{}
+#tags-main{}
